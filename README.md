@@ -36,7 +36,10 @@ https://your-username.github.io/your-repo-name/
 
 ## Data notes
 
-_Replace this line. Say which rows you left out and why, and how each figure on the site is defined. "Five things that will bite you" in the description sheet lists the problems to cover._
+- **The $10,000 rule.** Sales under $10,000 are left out as implausible prices (40 of 35,442 sales, including one at $0). Sales over $5,000,000 are kept: the site reports medians, which a few very high prices barely move.
+- **Median sale price by city** (chart and table on the home page): the median `sale_price` of the sales that pass the $10,000 rule, grouped by `city` and `state`. With an even number of sales it is the average of the two middle prices, rounded to the dollar. The page computes it from `data/college_town_home_sales.csv` in the browser each time it loads.
+- **Sales counted**: the number of sales in that city that pass the $10,000 rule.
+- These medians can differ slightly from the description sheet's table, which leaves out only sales under $1,000 (for example, Ann Arbor is $572,000 here and $571,000 there).
 
 ## Tools we used
 
